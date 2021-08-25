@@ -20,7 +20,7 @@
   <node pkg="tf2_ros" type="static_transform_publisher" name="very_inaccurate_odom" args="0 0 0 0 0 0 odom base_link"/>
   <node pkg="car_demo" type="joystick_translator" name="joystick_translator"/>
   <node pkg="car_demo" type="controller" name="controller"/>
-  <node pkg="car_demo" type="sensor_reader" name="sensor_reader"/>
+  <node pkg="car_demo" type="sensor_reader" name="sensor_reader" output="screen"/>
 
   <!-- Run two joy nodes publishing to the same topic, just to cover two possible joystick locations -->
   <node pkg="joy" type="joy_node" name="joy_node0">
