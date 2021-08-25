@@ -25,6 +25,10 @@ add_executable(controller nodes/controller.cpp)
 target_link_libraries(controller ${catkin_LIBRARIES})
 add_dependencies(controller prius_msgs)
 
+add_executable(sensor_reader nodes/sensor_reader.cpp)
+target_link_libraries(sensor_reader ${catkin_LIBRARIES})
+add_dependencies(sensor_reader prius_msgs)
+
 include_directories(include ${catkin_INCLUDE_DIRS} ${GAZEBO_INCLUDE_DIRS} ${SDFormat_INCLUDE_DIRS})
 
 add_library(PriusHybridPlugin SHARED plugins/PriusHybridPlugin.cc)
