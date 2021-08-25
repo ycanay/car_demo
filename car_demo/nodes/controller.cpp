@@ -33,7 +33,7 @@ int main(int argc, char** argv){
     ros::Subscriber subscriber = subscriber_handler.subscribe("/base_pose_ground_truth",1000,&velocity_message_recieved);
 
     ros::Rate rate(100);
-    PID pid_controller(1,0.3,0.03,3);
+    PID pid_controller(5,1,0.05,15);
     pid_controller.set_control_input_limits(1,-1);
 
     prius_msgs::Control controller_message;
