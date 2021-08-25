@@ -12,8 +12,6 @@ int main(int argc, char** argv){
 
     ros::NodeHandle publisher_handler;
     ros::Publisher publisher = publisher_handler.advertise<prius_msgs::Control>("/prius", 1000);
-
-    prius_msgs::Control controller_message;
     ros::Rate rate(5);
 
     prius_msgs::Control controller_message;
